@@ -1,0 +1,65 @@
+{% extends 'temp/index.html' %}
+{%load staticfiles %}
+{%block body_block%}
+<br>
+<br>
+<br>
+<h1 align="center" style="font-family:'Anton', sans-serif;">Choose your course and change your life. <br><br>Enjoy your life as coder</h1>
+<br>
+<hr>
+<br>
+<div class="wrapper" style="margin-left=-20px;">
+	<hr>
+	<ul class="navbar navbar-deafult" style="list-style-type: none;">
+	
+
+      <li>
+
+		<a href="{%url 'cplus'%}"><img  class="img-rounded" src="{% static 'image/c++.jpg'%}" style="width:355px;height:225px">
+		<h1  style="background-color:#0087e0;color:white;border-radius:8px;"><strong>C++</strong></h1></a>
+      </li>
+
+	<li>
+		<a href="{%url 'java'%}"><img  class="img-rounded" src="{% static 'image/2.jpg'%}" style="width:355px;height:225px">
+		<h1 style="background-color:#0087e0;color:white;border-radius:8px;"><strong>JAVA</strong></h1></a>
+
+	</li>
+
+      <li>
+
+        <a href="{%url 'python'%}"><img  class="img-rounded" src="{%static 'image/py.jpg'%}" style="width:355px;height:225px">
+			<h1 style="background-color:#0087e0;color:white;border-radius:8px;"><strong>Python</strong></h1></a>
+    </li>
+
+    </ul>
+	<hr>
+	<br>
+    <ul class="navbar navbar-deafult" style="list-style-type: none;">
+
+     <li>
+
+		<a><img  class="img-rounded" src="https://prod-discovery.edx-cdn.org/media/course/image/6d40d803-76af-452b-8609-0dbadbe37fee.small.jpg" style="width:355px;height:225px" >
+			<h1 style="background-color:#0087e0;color:white;border-radius:8px;"><strong>HTML</strong></h1></a>
+	</li><br>
+
+
+      <li>
+
+        <a href="{%url 'js'%}"><img class="img-rounded" src="{%static 'image/js.png'%}" style="width:355px;height:225px" >
+			<h1 style="background-color:#0087e0;color:white;border-radius:8px;"><strong>Javascript</strong></h1></a>
+	  </li>
+		<br>
+
+      <li>
+        <img class="img-rounded" src="https://prod-discovery.edx-cdn.org/media/course/image/32f1ba67-31e7-4b85-aa65-a4687036231c.small.png" style="width:355px;height:225px">
+		<h1 style="background-color:#0087e0;color:white;border-radius:8px;"><strong>CSS</strong></h1>
+      </li><br>
+
+	</ul>
+	<hr><br>
+	
+</div>
+{%endblock%}
+
+
+

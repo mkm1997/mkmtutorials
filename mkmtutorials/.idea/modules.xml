@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$USER_HOME$/Anaconda3/Lib/site-packages/allauth/.idea/allauth.iml" filepath="$USER_HOME$/Anaconda3/Lib/site-packages/allauth/.idea/allauth.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../cbv/.idea/cbv.iml" filepath="$PROJECT_DIR$/../cbv/.idea/cbv.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../mkmproject/.idea/mkmproject.iml" filepath="$PROJECT_DIR$/../mkmproject/.idea/mkmproject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/mkmtutorials.iml" filepath="$PROJECT_DIR$/.idea/mkmtutorials.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../s_auth/.idea/s_auth.iml" filepath="$PROJECT_DIR$/../s_auth/.idea/s_auth.iml" />
+    </modules>
+  </component>
+</project>

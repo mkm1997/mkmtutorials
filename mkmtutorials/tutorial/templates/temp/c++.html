@@ -1,0 +1,156 @@
+{%extends 'temp/index.html'%}
+{%block body_block%}
+
+
+<style>
+.vertical-menu {
+    width: 200px;
+    height:655px;
+    overflow-y: auto;
+}
+.vertical-menu a {
+    background-color: #eee;
+    color: black;
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+}
+
+.vertical-menu a:hover {
+    background-color: #ccc;
+}
+
+.vertical-menu a.active {
+    background-color: rgb(50,248,100);
+    color: white;
+}
+
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 45%;
+}
+.main{
+
+     margin-left:-20px;
+	 margin-right:-20px;
+}
+.video-container {
+    position: relative;
+    padding-bottom: 45%;
+
+	margin-top:40px;
+    height:0px;
+    overflow: hidden;
+}
+.video-container iframe {
+
+    border:solid 8px #0087e0;
+    position: absolute;
+    top:0px;
+    left: 20px;
+    width: 95%;
+    height: 90%;
+}
+</style>
+
+<div class="container-fluid main" style="background-color:#eee;padding-right:0;">
+<div class="row">
+<div class=" col-sm-2 vertical-menu" style="padding-right:0;">
+<nav class="navbar navbar-default menu loader" style="border:none;padding:0px;">
+<div class="navbar-header"><!-- for collapsable icon-->
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#synavbar" style="background-color:rgb(50,248,100)">
+					<strong>Menu</strong>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					</button><!--end of buttons-->
+</div> <!--end of navbar header-->
+<div class="collapse navbar-collapse " id="synavbar" style="padding:0;">
+  <a href="#" class="active"><strong style="font-size:20px;margin-left:40px">Menu</strong></a>
+  <a onclick="change(this.id)" id="0">1 - Installing CodeBlocks</a>
+  <a onclick="change(this.id)" id="1">2 - Understanding a Simple C++ Program</a>
+  <a onclick="change(this.id)" id="2">3 - More on Printing Text</a>
+  <a onclick="change(this.id)" id="3">4 - Variables</a>
+  <a onclick="change(this.id)" id="4">5 - Creating a Basic Calculator</a>
+  <a onclick="change(this.id)" id="5">6 - Variables Memory Concepts</a>
+  <a onclick="change(this.id)" id="6">7 - Basic Arithmetic</a>
+  <a onclick="change(this.id)" id="7">8 - if Statement</a>
+  <a onclick="change(this.id)" id="8">9 - Functions</a>
+  <a onclick="change(this.id)" id="9">10 - Creating Functions That Use Parameters</a>
+  <a onclick="change(this.id)" id="10">11 - Functions That Use Multiple Parameters</a>
+  <a onclick="change(this.id)" id="11">12 - Introduction to Classes and Objects</a>
+  <a onclick="change(this.id)" id="12">13 - Using Variables in Classes</a>
+  <a onclick="change(this.id)" id="13">14 - Constructors</a>
+  <a onclick="change(this.id)" id="14">15 - Placing Classes in Separate Files</a>
+  <a onclick="change(this.id)" id="15">16 - if Statement.....again?</a>
+  <a onclick="change(this.id)" id="16">17 - if / else Statement</a>
+  <a onclick="change(this.id)" id="17">18 - while Loops</a>
+  <a onclick="change(this.id)" id="18">19 - Simple Program Using a Loop</a>
+  <a onclick="change(this.id)" id="19">20 - Sentinel Controlled Program</a>
+  <a onclick="change(this.id)" id="20"> 21 - Assignment and Increment Operators</a>
+  <a onclick="change(this.id)" id="21">22 - for Loops</a>
+  <a onclick="change(this.id)" id="22">23 - Making a Stock Market Simulator!</a>
+  <a onclick="change(this.id)" id="23">24 - do while Loops</a>
+  <a onclick="change(this.id)" id="24">25 - switch</a>
+  <a onclick="change(this.id)" id="25">26 - Logical Operators</a>
+  <a onclick="change(this.id)" id="26">27 - Random Number Generator</a>
+  <a onclick="change(this.id)" id="27">28 - Default Arguments / Parameters</a>
+  <a onclick="change(this.id)" id="28">29 - Unary Scope Resolution Operator</a>
+  <a onclick="change(this.id)" id="29">30 - Function Overloading</a>
+  <a onclick="change(this.id)" id="30">31 - Recursion</a>
+  <a onclick="change(this.id)" id="31">32 - Arrays</a>
+  <a onclick="change(this.id)" id="32">33 - Create an Array Using Loops</a>
+  <a onclick="change(this.id)" id="33">34 - Using Arrays in Calculations</a>
+  <a onclick="change(this.id)" id="34">35 - Passing Arrays to Functions</a>
+  <a onclick="change(this.id)" id="35">36 - Multidimensional Arrays</a>
+  <a onclick="change(this.id)" id="36">37 - How to Print Out Multidimensional Arrays</a>
+  <a onclick="change(this.id)" id="37">38 - Introduction to Pointers</a>
+  <a onclick="change(this.id)" id="38">39 - Pass by Reference with Pointers</a>
+  <a onclick="change(this.id)" id="39">40 - sizeof</a>
+
+
+ </div>
+</nav>
+</div>
+
+
+<div class="col-sm-10  video-container"   >
+<iframe src="https://www.youtube.com/embed/tvC1WCdV1XU"
+    frameborder="0" allowfullscreen="" class="video"></iframe>
+</div>
+
+</div>
+</div>
+
+
+<script type="text/javascript">
+
+			  console.log(document.getElementsByTagName("iframe")[0].src);
+				list = ["https://www.youtube.com/embed/tvC1WCdV1XU","https://www.youtube.com/embed/SWZfFNyUsxc","https://www.youtube.com/embed/sPv0HQ8xOaU","https://www.youtube.com/embed/QwBSv4-_Lmk","https://www.youtube.com/embed/yjucJUsHSqg",
+						"https://www.youtube.com/embed/3Iq_uFbc4L4","https://www.youtube.com/embed/L1z2dpCosXU","https://www.youtube.com/embed/yEY8xlnarNo","https://www.youtube.com/embed/bsWWHo4KDHE","https://www.youtube.com/embed/-87KQS-rZCA","https://www.youtube.com/embed/fQ_CBGVfGbM",
+						"https://www.youtube.com/embed/ABRP_5RYhqU","https://www.youtube.com/embed/jTS7JTud1qQ","https://www.youtube.com/embed/_b7odUc7lg0","https://www.youtube.com/embed/NTip15BHVZc","https://www.youtube.com/embed/uYciTJ7CDOY","https://www.youtube.com/embed/jK83lln_T1k",
+						"https://www.youtube.com/embed/KLKhsaOPnLk","https://www.youtube.com/embed/GGA0z_6tvOU","https://www.youtube.com/embed/791XRPJYdfA","https://www.youtube.com/embed/T0kEDZ-tuNw","https://www.youtube.com/embed/sBO8yvyyBI0","https://www.youtube.com/embed/1S__GRWtyvg",
+						"https://www.youtube.com/embed/yRdPe2acogw","https://www.youtube.com/embed/TNUCZpgPjrw","https://www.youtube.com/embed/o78khWdmqIE","https://www.youtube.com/embed/naXUIEAIt4U","https://www.youtube.com/embed/66zF2rqoKI8","https://www.youtube.com/embed/ZwxMlIS6TLM",
+						"https://www.youtube.com/embed/IAMzWp3kS_k","https://www.youtube.com/embed/4agL-MQq05E","https://www.youtube.com/embed/1kLw8kZuccQ","https://www.youtube.com/embed/Z9Wc8EsGjJY","https://www.youtube.com/embed/v2dKtxtWT5o","https://www.youtube.com/embed/VnZbghMhfOY","https://www.youtube.com/embed/B3iC40frU4M",
+						"https://www.youtube.com/embed/pAKZp_EucVg","https://www.youtube.com/embed/Fa6S8Pz924k","https://www.youtube.com/embed/_ja8iizm7nk","https://www.youtube.com/embed/_5EEHKkvv1s",
+						];
+
+
+
+				function change(id_of_the_tag){
+					console.log(document.getElementsByTagName("iframe")[0].src);
+					document.getElementsByTagName("iframe")[0].src = list[id_of_the_tag];
+				};
+
+
+			alert("If you are open the tutorial on mobile phone then please rotate the phone for better experience :)");
+
+</script>
+
+
+
+
+{%endblock%}

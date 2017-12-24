@@ -1,0 +1,153 @@
+{%extends 'temp/index.html'%}
+{%block body_block%}
+
+
+
+<style>
+.vertical-menu {
+    width: 200px;
+    height:655px;
+    overflow-y: auto;
+}
+.vertical-menu a {
+    background-color: #eee;
+    color: black;
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+}
+
+.vertical-menu a:hover {
+    background-color: #ccc;
+}
+
+.vertical-menu a.active {
+    background-color: rgb(50,248,100);
+    color: white;
+}
+
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 45%;
+}
+.main{
+
+     margin-left:-20px;
+}
+.video-container {
+    position: relative;
+    padding-bottom: 45%;
+
+	margin-top:40px;
+    height:0px;
+    overflow: hidden;
+}
+.video-container iframe {
+     border:solid 8px #0087e0;
+    position: absolute;
+    top:0px;
+    left: 30px;
+    width: 95%;
+    height: 90%;
+}
+</style>
+
+<div class="container-fluid main" >
+<div class="row">
+<div class=" col-sm-2 vertical-menu" style="padding-right:0;">
+<nav class="navbar navbar-default menu loader" style="border:none;padding:0px;">
+<div class="navbar-header"><!-- for collapsable icon-->
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#synavbar" style="background-color:rgb(50,248,100)">
+					<strong>Menu</strong>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					</button><!--end of buttons-->
+</div> <!--end of navbar header-->
+<div class="collapse navbar-collapse" id="synavbar" style="padding:0;">
+  <a href="#" class="active"><strong style="font-size:20px;margin-left:40px">Menu</strong></a>
+  <a onclick="change(this.id)" id="0">1: Installing Python</a>
+  <a onclick="change(this.id)" id="1">2: Running Code in Python</a>
+  <a onclick="change(this.id)" id="2">3: Comments in Python</a>
+  <a onclick="change(this.id)" id="3">4: Variables in Python</a>
+  <a onclick="change(this.id)" id="4">5: Numbers & Strings</a>
+  <a onclick="change(this.id)" id="5">6: Lists & Tuples</a>
+  <a onclick="change(this.id)" id="6">7: Dictionaries</a>
+  <a onclick="change(this.id)" id="7">8: Data Type Conversion</a>
+  <a onclick="change(this.id)" id="8">9: Arithmetic & Comparison Operators</a>
+  <a onclick="change(this.id)" id="9">10: Bitwise & Logical Operators</a>
+  <a onclick="change(this.id)" id="10">11: Membership & Identity Operators</a>
+  <a onclick="change(this.id)" id="11">12: Operator Precedence</a>
+  <a onclick="change(this.id)" id="12">13: The IF statement</a>
+  <a onclick="change(this.id)" id="13">14: The ELSE Statement</a>
+  <a onclick="change(this.id)" id="14">15: The ELIF Statement</a>
+  <a onclick="change(this.id)" id="15">16: Nested IF-ELSE Statement</a>
+  <a onclick="change(this.id)" id="16">17: The WHILE Loop</a>
+  <a onclick="change(this.id)" id="17">18: The FOR Loop</a>
+  <a onclick="change(this.id)" id="18">19: The Break Statement</a>
+  <a onclick="change(this.id)" id="19">20: Application of Break Statement</a>
+  <a onclick="change(this.id)" id="20">21: Nested Loops</a>
+  <a onclick="change(this.id)" id="21">22: The Continue Statement</a>
+  <a onclick="change(this.id)" id="22">23: Numeric Functions (Part-1)</a>
+  <a onclick="change(this.id)" id="23">24: Numeric Functions (Part-2)</a>
+  <a onclick="change(this.id)" id="24">25: Numeric Functions (Part-3)</a>
+  <a onclick="change(this.id)" id="25">26: String Functions (Part-1)</a>
+  <a onclick="change(this.id)" id="26">27: String Functions (Part-2)</a>
+  <a onclick="change(this.id)" id="27">28: String Functions (Part-3)</a>
+  <a onclick="change(this.id)" id="28">29: List Functions (Part-1)</a>
+  <a onclick="change(this.id)" id="29">30: List Functions (Part-2)</a>
+  <a onclick="change(this.id)" id="30">31: Tuple Functions</a>
+  <a onclick="change(this.id)" id="31">32: Dictionary Functions</a>
+  <a onclick="change(this.id)" id="32">33: Date & Time Functions (Part-1)</a>
+  <a onclick="change(this.id)" id="33">34: Date & Time functions (Part-2)</a>
+  <a onclick="change(this.id)" id="34">35: User Defined Functions</a>
+  <a onclick="change(this.id)" id="35">36: Pass by Reference vs Value</a>
+  <a onclick="change(this.id)" id="36">37: Variable Length Arguments</a>
+  <a onclick="change(this.id)" id="37">38: Anonymous Functions</a>
+  <a onclick="change(this.id)" id="38">39: Global & Local Variables</a>
+  <a onclick="change(this.id)" id="39">40: Updating Global Variables</a>
+  <a onclick="change(this.id)" id="40">41: Modules</a>
+  <a onclick="change(this.id)" id="41">42: Handling Files</a>
+  <a onclick="change(this.id)" id="42">43: Renaming & Deleting Files</a>
+ 
+</div>
+</nav>
+</div>
+
+
+<div class="col-sm-10  video-container"  >
+    <iframe src="//www.youtube.com/embed/GE3IHS1wAZI"  frameborder="0" allowfullscreen="" class="video"></iframe>
+</div>
+
+</div>
+</div>
+
+
+<script type="text/javascript">
+
+	console.log(document.getElementsByTagName("iframe")[0].src);
+    list = ["https://www.youtube.com/embed/GE3IHS1wAZI","https://www.youtube.com/embed/enG7xaK7PfA","https://www.youtube.com/embed/Uu7C99-hG60","https://www.youtube.com/embed/YLn8apoZa1k","https://www.youtube.com/embed/cZyUNFGtUsk","https://www.youtube.com/embed/hmBT-uWHO1A","https://www.youtube.com/embed/QyMXean6WC4","https://www.youtube.com/embed/bkN0HAPR0O0",
+	"https://www.youtube.com/embed/ZEkNvq_DHZU","https://www.youtube.com/embed/LK4kIPuEgUU","https://www.youtube.com/embed/aaBYOzR9uZo","https://www.youtube.com/embed/CfVqGxT19wQ","https://www.youtube.com/embed/kMx4saqLuE8","https://www.youtube.com/embed/20HbYZz3Qv4","https://www.youtube.com/embed/EdkfjHbfekw","https://www.youtube.com/embed/cE2Q1_8UOKc",
+	"https://www.youtube.com/embed/xCaa4ig2lhU","https://www.youtube.com/embed/I5_UxvF_svw","https://www.youtube.com/embed/DiLyUU735Es","https://www.youtube.com/embed/eXSB1YOBZ6s","https://www.youtube.com/embed/HfzCpDilEVM","https://www.youtube.com/embed/ScMd9kuKuoQ","https://www.youtube.com/embed/hgDjtQLTTM0","https://www.youtube.com/embed/FtW6hnCOGgw",
+	"https://www.youtube.com/embed/Za_GRt2-rT8","https://www.youtube.com/embed/yjRkEX4OTyc","https://www.youtube.com/embed/DSn3ea6Zi0c","https://www.youtube.com/embed/psSl7XM1oPo","https://www.youtube.com/embed/eQGVCvfBLUk","https://www.youtube.com/embed/XoI0IJ9RY4M","https://www.youtube.com/embed/v1hvsx2wKcs","https://www.youtube.com/embed/EqX1VWOJCTo",
+	"https://www.youtube.com/embed/S6gVq_uNUWE","https://www.youtube.com/embed/A_kJ-LkkGlQ","https://www.youtube.com/embed/zE5OgFqPlpk","https://www.youtube.com/embed/aCDrcaYRU0I","https://www.youtube.com/embed/K9mforcHkLs","https://www.youtube.com/embed/fRiIugqHmKQ","https://www.youtube.com/embed/qpOQHhVTH4M","https://www.youtube.com/embed/NQWRdv5b7T8","https://www.youtube.com/embed/AWAvG_P8Tyw",
+	"https://www.youtube.com/embed/ZmHsa-7yw9k","https://www.youtube.com/embed/AX3SmD-TI9E",
+	
+	];
+    function change(id_of_the_tag){
+      console.log(document.getElementsByTagName("iframe")[0].src);
+      document.getElementsByTagName("iframe")[0].src = list[id_of_the_tag];
+    };
+
+
+ alert("If you are open the tutorial on mobile phone then please rotate the phone for better experience :)");
+	
+</script>
+
+
+
+
+{%endblock%}

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+{%load staticfiles%}
+<html lang=''>
+<head>
+   <meta charset='utf-8'>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width-device-width, initial-scale=1">
+<title>MKM Tutorials</title>
+<link rel="icon" href="{%static 'image/logo.png'%}" type="image/ico">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous"><link rel="stylesheet" href="{% static 'styles.css'%}">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Acme|Anton|Lobster|Oswald|Playfair+Display|Roboto|Roboto+Condensed|Roboto+Slab|Spectral+SC" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Kurale|Nixie+One|Orbitron" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+
+   
+   
+   
+</head>
+<body >
+       
+
+<div class="se-pre-con"></div>
+
+	  <div class="topnav" id="myTopnav">
+		<a href="{%url 'home' %}" class="active" ><span class="glyphicon glyphicon-home"> <strong style="font-family:'Orbitron', sans-serif;">Home</strong></span></a>
+		<a href="{%url 'about'%}"  style="font-family:'Orbitron', sans-serif;"><strong>About Us</strong></a>
+		<a href="{%url 'tute'%}" style="font-family:'Orbitron', sans-serif;"><strong>Courses</strong></a>
+		<a href="{%url 'compile'%}" style="font-family:'Orbitron', sans-serif;"><strong>Code</strong></a>
+		<a href="http://mkm1997.pythonanywhere.com/usict/blog/" style="font-family:'Orbitron', sans-serif;"><strong>Blog</strong></a>
+		<a href="{%url 'account_signup'%}" style="font-family:'Orbitron', sans-serif;"><strong>Register</strong></a>
+		{% if user is authenticated %}
+		<a href="{%url 'account_Login'%}" class="pull-right" style="font-family:'Orbitron', sans-serif;"><strong>Logout</strong></a>
+		{%else%}
+		<a href="{%url 'account_logout'%}" class="pull-right" ><span class="glyphicon glyphicon-user" ><strong style="font-family:'Orbitron', sans-serif;"> Login/Logout</strong></span></a>
+		{%endif%}
+		<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+	</div>
+
+
+<!-- ----------------------------------------------------------------allthe template execute here ------------------------------------------------------------ -->
+   
+   
+   {%block body_block%}
+
+   
+   
+   {%endblock%}
+   
+<!-- --------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+   <!--bottom right comment box-->
+    <a href="{%url 'contact'%}" style="z-index:1001; position: fixed; right:20px; bottom: 0px; width:200px;" class="pull-right pull-bottom btn btn-info collapsed" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="true" aria-controls="#collapseExample">
+         <i class="fa fa-comments" aria-hidden="true"></i> Contact us
+    </a>
+	<div style="z-index:1000; position: fixed; right:0; bottom:0px;" class="pull-right collapse" id="collapseExample">
+         <div class="well">
+				<h5 title="Minimize" style="background-color: #fff; padding:2px 5px; cursor:pointer;" class="pull-right" data-toggle="collapse" data-target="#collapseExample" aria-expanded="true" aria-controls="#collapseExample"><i class="fa fa-window-minimize" aria-hidden="true"></i></h5>
+				<h5><i class="fa fa-envelope-o" aria-hidden="true" style="font-size: 25px;"></i> We are offline right now! Send us your query</h5>
+            <br>
+                  <form action="{%url 'contact'%}" method="post">
+					  {%csrf_token%}
+
+
+                     <label for="name">Name</label>
+    	             <input class="form-control" type="text" name="name" placeholder="Name*" required>
+			         <label for="email">Email</label>
+	  	             <input class="form-control" type="email" name="email" placeholder="Email*" required>
+			         <label for="contact">Contact Number</label>
+                     <input class="form-control" type="text" name="contact" placeholder="Contact Number*" required>
+			         <label for="query">Query</label>
+					  <br>
+
+			         <textarea name="query" rows="4" cols="33" placeholder="Enter Your Query!"></textarea>
+					  <br>
+
+			         <input type="submit" value="Send" class="btn btn-sm btn-primary">
+                  </form>
+         </div>
+   </div>
+
+
+<footer>
+<div class="container-fluid" style="background-color:#000099;margin-bottom:0px;" >
+	<div class="row">
+		<img src="{% static 'image/logo.png' %}" class="wrapper bgded overlay">
+			<div class ="coll-sm-4" style="color:white">
+				<ul style="list-style-type: none;">
+					<li ><a href="{%url 'home'%}"><h3 style="color:white;font-family:'Orbitron', sans-serif;"> Home</h3></a></li>
+					<li ><a href="{%url 'about'%}"><h3 style="color:white;font-family:'Orbitron', sans-serif;"> About us</h3></a></li>
+					<li ><a href="{%url 'about'%}"><h3 style="color:white;font-family:'Orbitron', sans-serif;"> Blog</h3></a></li>
+					<li ><a href="{%url 'tute'%}"><h3 style="color:white;font-family:'Orbitron', sans-serif;">Course</h3></a></li>
+					<li ><a href="{%url 'account_signup' %}"><h3 style="color:white;font-family:'Orbitron', sans-serif;"> Register</h3></a></li>
+				</ul>
+			</div>
+
+  
+			<div class="col-sm-4" align="center">
+				<br>
+				<h4 style="color:white">Connect us,<br>with</h4>
+				<div class="social">
+  				<a class="fa fa-facebook" title="" target="_blank" href="https://www.facebook.com"></a>
+  				<a class="fa fa-twitter" title="" target="_blank" href="https://www.twitter.com"></a>
+				<a class="fa fa-linkedin" title="" target="_blank" href="https://www.linkedin.com"></a>
+				<a class="fa fa-google" title="" target="_blank" href="https://www.google.com"></a>
+				<a class="fa fa-instagram" title="" target="_blank" href="https://www.instagram.com"></a>
+				</div>
+			</div>
+
+		
+			<div class="col-sm-4" style="color:white">
+				<br>
+					<Strong style="margin-top:6px">Contact Us:</Strong>
+					<h4 class="content">Manish Kumar Mishra</h4>
+				<hr>
+				<h4><span class="fa fa-envelope-o"> manishmishra039@gmail.com, </span></h4>
+				<hr>
+					<span class="glyphicon glyphicon-earphone"><i> <small>+</small>91-8745873385</i> </span>
+				<hr>
+
+			</div>
+
+   
+
+	</div>
+</div>
+
+
+
+
+<!-- footer part -->
+</footer>
+<div align="center" style="background-color:rgb(0,0,0);color:white;padding:20px">
+<strong style="margin-bottom:20px">Copyright © 2017 - All Rights Reserved - mkmtutorials.tech</strong>
+</div>
+<!-- preloader-->
+
+
+<!--script for nav bar-->
+<script>
+		function myFunction() {
+		var x = document.getElementById("myTopnav");
+		if (x.className === "topnav") {
+			x.className += " responsive";
+			} else {
+				x.className = "topnav";
+			}
+		}
+</script>
+
+
+
+
+
+<!-- jQuery Plugin -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+
+<!-- Preloader -->
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+</body>
+<html>
