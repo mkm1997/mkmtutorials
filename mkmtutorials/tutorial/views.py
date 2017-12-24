@@ -1,12 +1,10 @@
 from django.shortcuts import render,reverse
 from django.http import HttpResponse,HttpResponseRedirect
 from django.shortcuts import get_object_or_404
-from rest_framework.views import APIView
-from rest_framework import response
-from rest_framework.response import Response
-from rest_framework import status
-from .models import employees,usersignup
-from .serializers import employeeseri
+
+
+from .models import usersignup
+
 from django.views.generic import TemplateView
 from .forms import signup,info
 from django.contrib.auth.decorators import login_required
@@ -48,18 +46,6 @@ def your_view(request):
         else:
             return HttpResponse("<h4>You are giving wrong input or searching for wrong course please make a correct search like enter python for python course</h2>")
 
-
-
-class employee(APIView):
-
-
-    def get(self,request):
-        employee1= employees.objects.all()
-        seriallizer= employeeseri(employee1,many=True)
-        return Response(seriallizer.data)
-
-    def post(self):
-        pass
 
 class MKMTUTE(TemplateView):
 

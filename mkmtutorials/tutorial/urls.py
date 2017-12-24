@@ -6,7 +6,7 @@ from . import views
 
 urlpatterns=[
 
-        url(r'^api' , views.employee.as_view(),name='api'),
+
         url(r'^tute/',views.MKMTUTE.as_view(),name='tute'),
         url(r'^home/',views.home.as_view(),name='home'),
         url(r'^sign/',views.signup,name='sign'),
