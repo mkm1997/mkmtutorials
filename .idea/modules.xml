@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/.idea/temporarypython.iml" filepath="$PROJECT_DIR$/.idea/temporarypython.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/.idea/tutegit.iml" filepath="$PROJECT_DIR$/.idea/tutegit.iml" />
+>>>>>>> 8a62c327e542847e0b698196852907ada9e304d0
     </modules>
   </component>
 </project>

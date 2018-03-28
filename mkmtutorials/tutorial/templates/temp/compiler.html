@@ -1,0 +1,117 @@
+{%extends 'temp/index.html'%}
+{%block body_block%}
+
+<div class="container-fluid">
+
+
+<style>
+
+.vertical-menu {
+    width: 200px;
+    height:200px;
+    overflow-y: auto;
+}
+.vertical-menu a {
+    background-color: #eee;
+    color: black;
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+}
+
+.vertical-menu a:hover {
+    background-color: #ccc;
+}
+
+.vertical-menu a.active {
+    background-color: rgb(50,248,100);
+    color: white;
+}
+
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 45%;
+}
+.main{
+
+     margin-left:-20px;
+}
+.video-container {
+
+    border:solid 8px #0087e0;
+    position: relative;
+    padding-bottom: 45%;
+
+	margin-top:40px;
+    height:0px;
+    overflow: hidden;
+}
+.video-container iframe {
+    position: absolute;
+    top:0px;
+    left: 30px;
+    width: 95%;
+    height: 90%;
+}
+</style>
+
+<div class="container-fluid main" style="padding:0px;background-color:#eee" >
+<div class="row">
+<div class=" col-sm-2 vertical-menu" style="padding-right:0;">
+<nav class="navbar navbar-default menu loader" style="border:none;padding:0px;">
+<div class="navbar-header"><!-- for collapsable icon-->
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#synavbar" style="background-color:rgb(50,248,100)">
+					<strong>Menu</strong>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					</button><!--end of buttons-->
+</div> <!--end of navbar header-->
+<div class="collapse navbar-collapse" id="synavbar" style="padding:0;">
+  <a href="#" class="active"><strong style="font-size:20px;margin-left:40px">Menu</strong></a>
+  <a onclick="change(this.id)" id="0">C++ Compiler</a>
+  <a onclick="change(this.id)" id="1">Java Compiler</a>
+  <a onclick="change(this.id)" id="2">Python compiler</a>
+  <!--a onclick="change(this.id)" id="3";>Introduction to C++</a>
+  <a onclick="change(this.id)" id="4";>Introduction to C++</a-->
+  
+
+</div>
+</nav>
+</div>
+
+
+<div class="col-sm-10  video-container"  >
+<iframe  src="http://cpp.sh"
+frameborder="0" allowfullscreen="" ></iframe>
+
+
+</div>
+
+</div>
+</div>
+<br>
+<br>
+
+
+
+<script type="text/javascript">
+
+	  console.log(document.getElementsByTagName("iframe")[0].src);
+    list = ["http://cpp.sh", "https://www.compilejava.net/" ,"http://rextester.com/l/python3_online_compiler"];
+    function change(id_of_the_tag){
+      console.log(document.getElementsByTagName("iframe")[0].src);
+      document.getElementsByTagName("iframe")[0].src = list[id_of_the_tag];
+    };
+
+</script>
+
+</div>
+
+
+
+
+{%endblock%}

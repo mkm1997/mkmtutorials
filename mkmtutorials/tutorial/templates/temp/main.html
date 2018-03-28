@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+
+<html lang="eng-us">
+	<head>
+		
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE-edge">
+		<meta name="viewport"content="width-device-width">
+		<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}"> <!-- link the bootstrap css file-->
+		<link rel="stylesheet" href="{% static 'css/projectstyle.css' %}"><!-- link css file with the name projectstyle.cc-->
+
+		<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+		</head>
+		<body><!-- header class-->
+		<div class="container-fluid top_bar" >
+			<div class="container" >
+				<div class="row">
+					
+					<div class="col-sm-3" >
+					<a href="https://www.facebook.com" class="icon" title="facebook" target="_blank"><i class="fa fa-facebook"  aria-hidden="true" style="font-size:20px;color:#fff"></i></a>
+					<a href="https://www.instagram.com" class="icon" title="instagram" target="_blank"><i class="fa fa-instagram" aria-hidden="true" style="font-size:20px;color:white"></i></a>
+					<a href="https://www.twitter.com" class="icon" title="twitter" target="_blank"><i class="fa fa-twitter" aria-hidden="true" style="font-size:20px;color:white"></i></a>
+					<a href="https://www.googleplus.com" class="icon" title="google plus" target="_blank"><i class="fa fa-google"  aria-hidden="true" style="font-size:20px;color:white"></i></a>
+					<a href="https://www.youtube.com" class="icon" title="youtube" target="_blank"><i class="fa fa-youtube" aria-hidden="true" style="font-size:20px;color:white"></i></a>
+					</div>
+					<div class="col-sm-9" >
+						<div class="contact">
+						<span class="glyphicon glyphicon-envelope"><i> manishmishra039@gmail.com,</i> </span>
+						<span class="glyphicon glyphicon-earphone"><i> <small>+</small>91-8745873385</i> </span>
+						</div>
+					</div>
+					</div><!--end of column-->
+			</div><!-- end of row -->
+		</div><!--end of container-->
+		</div><!--end of header-->
+		<!-- body parts start -->
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6">
+				<img src="{% static 'image/bansal.png' %}" class="img">
+				</div>
+				<div class="com-sm-6 menu">
+				<nav class="navbar navbar-default">
+					<div class="navbar-header"><!-- for collapsable icon-->
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#synavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					</button><!--end of buttons-->
+					<div class="collapse navbar-collapse" id="synavbar">
+					<ul class="nav navbar-nav pull-right">
+					<li class="active"><a href ="#">Home</a></li>
+					<li><a href="#">About us</a></li>
+					<li><a onclick="document.getElementById('cou')">Courses</a></li>
+					<li><a  onclick="document.getElementById('id01').style.display='block'" style="width:auto;" >Login/Signup</a></li>
+
+						{% if user.is_authenticated %}
+						<li><p>houu</p></li>
+						{% else %}
+						<li><a href="{%url 'account_signup'%}">LOGIN</a></li>
+						{% endif %}
+					</ul>
+					</div><!--end of collapse-->
+					</div>
+				</nav>
+				</div><!--end of col-->
+			</div>
+		</div>
+		<h1 class="text" align="center">Free Online Courses.<br>Advance Your Career. Improve Your Life.</h1>
+		<div class="container-fluid">
+			<div class="row"><!-- for main image-->
+				<h1>Search Whatever You want to Learn</h1>
+			<img class="img-responsive search"  src="https://www.edutopia.org/sites/default/files/styles/responsive_2880px/public/cover_media/davis-169hero2-teachcode-twenty20.jpg?itok=CUjdPw9L&timestamp=1479407237">
+
+			</div>
+		</div>
+		<div class="container-fluid">		<!--middle part of body-->
+			<div class="row">
+				<div class="col-sm-5 more">
+				<h1 align="center">Welcome to M.K.M Tutorial.</h1>
+				<p style="font-size:25px">M.K.M Tutorial is an one of the best website  for coder to learn programing.Here you can learn most important programming language like Java,Python,C,C++,HTML,CSS etc. in easy way.  </p>
+				<p style="font-size:25px">All the courses which are provided by us is free of cost.You will not have to pay anything except some time.</p>
+				<p style="font-size:25px">The demand for coding skills is skyrocketing, and not just for developers — programming is playing a bigger role in every career path. Add the right technical skills to your résumé so you can pursue a more fulfilling career.</p>
+				</div>
+				<div class="col-sm-4 more" style="margin-top:10px;">
+					<div id="my_slider" class="carousel slide" data-ride="carousel" data-interval="2000"><!--image slider class-->
+					<div class="carousel-indicators" >
+					<ol>
+
+					<li data-target="#my_slider " data-slide-to="0" class="active"></li>
+					<li data-target="#my_slider" data-slide-to="1"></li>
+					<li data-target="#my_slider" data-slide-to="2"></li>
+					<li data-target="#my_slider" data-slide-to="3"></li>
+			
+					</ol>
+					</div>
+						<div class="carousel-inner">
+						<div class="item active">
+						<img class="img-responsive" src="https://morseinstitute.org/wp-content/uploads/2017/05/java_thumb.jpg">
+						</div>
+						<div class="item">
+						<img class="img-responsive" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/500px-Python-logo-notext.svg.png">
+						</div>
+						<div class="item">
+						<img class="img-responsive" src="http://mindpulley.co.in/wp-content/uploads/2014/07/cover-3.jpg">
+						</div>
+						<div class="item">
+						<img class="img-responsive" src="https://png.icons8.com/c-programming/color/1600">
+						</div>
+						<!--div class="item">
+						
+				
+						</div-->
+						</div><!--for iner slider-->
+					</div>
+
+					<!--div>
+					<img class="img-responsive mid" src="https://static.wixstatic.com/media/b837a4_5c77339edb314abbb92e37dcf3213fc9~mv2.jpg_srz_532_386_85_22_0.50_1.20_0.00_jpg_srz">
+					</div-->
+				</div><!-- end of slider-->
+				<div class="col-sm-3 more">
+				<h1 color="red" style="font-weight:bold;font-color:rgb(200,100,100)"></h1>
+				<a href="#" title="codechef"><img  class="img-responsive img_pad" src="https://www.codechef.com/sites/all/themes/abessive/logo.png"></a>
+				<a href="#" title="Hackerearth"><img class="img-responsive img_pad"  src="https://www.sabre.com/wp/wp-content/uploads/hacker_earth.gif"></a>
+				<!--a href="#" title="Hackerrank"><img class="img-responsive img_pad" src="http://techspirit.in/wp-content/uploads/2015/07/HackerRank_logo.png"></a-->
+				<a href="#" title="edx.org"><img class="img-responsive img_pad" src="http://www.southernsavers.com/wp-content/uploads/2017/01/online-classes.jpg"></a>
+				</div>
+			</div>
+		</div>
+		</div>
+
+
+		<iframe src="https://www.w3schools.com"></iframe>
+
+		<!--div class="jumbotron">
+			<form action=""  method="post">
+				{% csrf_token %}
+
+				{{form.as_p}}
+				<input type="submit" value="Signup" name="Signup">
+
+			</form>
+		</div-->
+		<footer class="foot"><!--footer class-->
+
+		<div class="container">
+			<div class="row">
+			<div class="col-sm-3">
+				<img src="{% static 'image/bansal.png'%}" title="M.K.M Tutorial">
+				<div class="img_footer imag-circle">
+				
+				</div>
+			</div>
+			<div class="col-sm-3">
+			<img class="img-responsive" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgDhBFFAobczEKCk9HVfvbMSqOtVgzfyrVdDK_nEChL9jsxMDAHw" style="margin-top:20px">
+			
+			</div>
+			<div class="col-sm-3 pull-right">
+			<ul style="padding-top:20px;font-size:25px;">
+			<a href="#" style="color:white"><li><strong>About us</strong></li></a>
+			<a href="#" style="color:white"><li><strong>Contact info.</strong></li></a>
+			
+			<a href="#" style="color:white"><li><strong>Courses</strong></li></a>
+			<a href="#" style="color:white"><li><strong>More</strong></li></a>
+			</ul>
+			</div>
+			</div>
+		</div>	
+		</footer>
+
+
+
+
+
+
+    <script>
+    $(function(){
+      $("#cou").load("b.html");
+    });
+    </script>
+
+
+     <div id="cou"></div>
+
+		<!-- login signup page -->
+		<!--button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button-->
+<!-- course section-->
+<div class="container-fluid">
+<div id="id02" class="modal">
+
+	<div class="jumbotron" align="center">
+		<h2><strong>The List Of Course Given Below.<br>Choose Any Course You Like And Explor What You Wan.t</strong></h2>
+		<ul class="dropdown">
+			<li><em><strong>Python</strong></em></li>
+			<li><em><strong>JAVA</strong></em></li>
+			<li><em><strong>C++</strong></em></li>
+			<li><em><strong>C</strong></em></li>
+			<li><em><strong>Javascript</strong></em></li>
+			<li><em><strong>HTML & CSS</strong></em></li>
+
+		</ul>
+
+	</div>
+
+
+</div>
+</div>
+		<script>
+// Get the modal
+var modal = document.getElementById('id01'||'id02'||'id03');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+ if (event.target == modal) {
+     modal.style.display = "none";
+   }
+}
+</script>
+
+
+
+		
+		<script type="text/javascript" src="{% static 'js/script.js'%}"></script>
+		<script type="text/javascript" src="{% static 'js/jquery-3.2.1.js' %}"></script> <!-- include the jquery file and link it to the body-->
+		<script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>
+		<!--header-->
+		
+
+		 <script>
+    $(function(){
+      $("#cou").load("course.html");
+    });
+    </script>
+
+
+		</body>
+</html>

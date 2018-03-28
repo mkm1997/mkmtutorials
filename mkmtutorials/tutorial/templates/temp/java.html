@@ -1,0 +1,185 @@
+
+
+{%extends 'temp/index.html'%}
+{% block body_block%}
+
+
+<style>
+
+.vertical-menu {
+    width: 200px;
+    height:655px;
+    overflow-y: auto;
+}
+.vertical-menu a {
+    background-color: #eee;
+    color: black;
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+}
+
+.vertical-menu a:hover {
+    background-color: #ccc;
+}
+
+.vertical-menu a.active {
+    background-color: rgb(50,248,100);
+    color: white;
+}
+
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 45%;
+}
+.main{
+
+     margin-left:-20px;
+}
+.video-container {
+    position: relative;
+    padding-bottom: 45%;
+
+	margin-top:40px;
+    height:0px;
+    overflow: hidden;
+}
+.video-container iframe {
+	 border:solid 8px #0087e0;
+    position: absolute;
+    top:0px;
+	padding-right:0px;
+    left: 30px;
+    width: 95%;
+    height: 90%;
+}
+</style>
+
+<div class="container-fluid main"  style="background-color:#eee;padding-right:0px">
+<div class="row">
+<div class=" col-sm-2 vertical-menu" style="padding-right:0">
+<nav class="navbar navbar-default menu loader" style="border:none;padding:0px;">
+<div class="navbar-header"><!-- for collapsable icon-->
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#synavbar" style="background-color:rgb(50,248,100)">
+					<strong>Menu</strong>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					</button><!--end of buttons-->
+</div> <!--end of navbar header-->
+<div class="collapse navbar-collapse" id="synavbar" style="padding:0;">
+  <a href="#" class="active"><strong style="font-size:20px;margin-left:40px">Menu</strong></a>
+		<a onclick="change(this.id)" id="0">1 - Introduction and Installing the java (JDK) Step by Step Tutorial</a>
+		<a onclick="change(this.id)" id="1">2 - Installing Eclipse IDE and Setting up Eclipse</a>
+		<a onclick="change(this.id)" id="2">3 - Installing Eclipse IDE and Setting up Eclipse</a>
+		<a onclick="change(this.id)" id="3">4 - Variables and Types in Java</a>
+		<a onclick="change(this.id)" id="4">5 - Getting User Input using Java</a>
+		<a onclick="change(this.id)" id="5">6 - Math and Arithmetic Operators in Java</a>
+		<a onclick="change(this.id)" id="6">7 - Increment Operator and Assignment Operator</a>
+		<a onclick="change(this.id)" id="7">8 - IF ... ELSE Statements and Relational Operators</a>
+		<a onclick="change(this.id)" id="8">9 - Logical Operators in Java</a>
+		<a onclick="change(this.id)" id="9">10 - switch Statement in Java</a>
+		<a onclick="change(this.id)" id="10">11 - The while Statements (while Loops)</a>
+		<a onclick="change(this.id)" id="11">12 - The do-while Statements (do-while Loops)</a>
+		<a onclick="change(this.id)" id="12">13 - Arrays in Java</a>
+		<a onclick="change(this.id)" id="13">14 - The for Statement in Java (for loops)</a>
+		<a onclick="change(this.id)" id="14">15 - Java String</a>
+		<a onclick="change(this.id)" id="15">16 - Introduction to Methods</a>
+		<a onclick="change(this.id)" id="16">17 - Parameter passing and Returning a Value from a Method</a>
+		<a onclick="change(this.id)" id="17">18 - Classes and Objects in Java</a>
+		<a onclick="change(this.id)" id="18">19 - Class Constructor in Java</a>
+		<a onclick="change(this.id)" id="19">20 - Method Overloading in Java</a>
+		<a onclick="change(this.id)" id="20">21 - 'static' keyword in Java</a>
+		<a onclick="change(this.id)" id="21">22 - 'static' keyword Example in Java</a>
+		<a onclick="change(this.id)" id="22">23 - Public, Private, Protected and this (Java Access Modifiers)</a>
+		<a onclick="change(this.id)" id="23">24 - The final keyword in Java</a>
+		<a onclick="change(this.id)" id="24">25 - Inheritance in Java</a>
+		<a onclick="change(this.id)" id="25">26 - Polymorphism in Java</a>
+		<a onclick="change(this.id)" id="26">27 - Method Overriding in Java</a>
+		<a onclick="change(this.id)" id="27">28 - Abstract Methods and Classes</a>
+		<a onclick="change(this.id)" id="28">29 - Java Interfaces</a>
+		<a onclick="change(this.id)" id="29">30 - Recursion in java</a>
+		<a onclick="change(this.id)" id="30">31 - Arraylist in Java</a>
+		<a onclick="change(this.id)" id="31">32 - LinkedList in Java</a>
+		<a onclick="change(this.id)" id="32">33 - Difference between LinkedList vs ArrayList in Java</a>
+		<a onclick="change(this.id)" id="33">34 - ListIterator in Java</a>
+		<a onclick="change(this.id)" id="34">35 - HashSet in Java</a>
+		<a onclick="change(this.id)" id="35">36 - Catching and Handling Exceptions in Java using Try Catch Blocks</a>
+		<a onclick="change(this.id)" id="36">37 - Java Finally block (try-catch-finally Exception Handling in Java )</a>
+		<a onclick="change(this.id)" id="37">38 - Create a File and Write in it Using PrintWriter and File class</a>
+		<a onclick="change(this.id)" id="38">39 - How to Read file using Java</a>
+		<a onclick="change(this.id)" id="39">40 - Using Date & Time + formatting Date using SimpleDateFormat</a>
+		<a onclick="change(this.id)" id="40">How to Create and Run a Simple JUnit test in Eclipse IDE</a>
+		<a onclick="change(this.id)" id="41">1 - Introduction to Java Threads</a>
+		<a onclick="change(this.id)" id="42">2 - How to Create Threads in Java by Extending Thread Class</a>
+		<a onclick="change(this.id)" id="43">3 - Creating Java Threads by implementing Runnable Interface</a>
+		<a onclick="change(this.id)" id="44">4 - Java Thread.join() Method and Synchronized Method</a>
+		<a onclick="change(this.id)" id="45">1 - Introduction To JavaFx</a>
+		<a onclick="change(this.id)" id="46">2 - Download and install JavaFX for Eclipse</a>
+		<a onclick="change(this.id)" id="47">3 - How to Create Your First JavaFX Application</a>
+		<a onclick="change(this.id)" id="48">4 - How to Use Lambda Expressions to Handle Events</a>
+		<a onclick="change(this.id)" id="49">5 - Installing JavaFX Scene Builder</a>
+		<a onclick="change(this.id)" id="50">6 - Events with JavaFX Scene Builder</a>
+		<a onclick="change(this.id)" id="51">7 - Styling with CSS in JavaFX</a>
+		<a onclick="change(this.id)" id="52">8 - How to build a Calculator in JavaFX Part-1</a>
+		<a onclick="change(this.id)" id="53">9 - How to build a Calculator in JavaFX Part-2</a>
+		<a onclick="change(this.id)" id="54">10 - Create Login Application</a>
+		<a onclick="change(this.id)" id="55">11 - Use ImageView To display Image in JavaFx</a>
+		<a onclick="change(this.id)" id="56">12 - JavaFX ComboBox</a>
+		<a onclick="change(this.id)" id="57">13 - JavaFX ListView</a>
+		<a onclick="change(this.id)" id="58">14 - JavaFX TreeView</a>
+		<a onclick="change(this.id)" id="59">15 - JavaFx TreeView Events</a>
+		<a onclick="change(this.id)" id="60">16 - JavaFX FileChooser</a>
+		<a onclick="change(this.id)" id="61">17 - JavaFX Properties</a>
+		<a onclick="change(this.id)" id="62">18 - JavaFX Binding, ProgressBar and ProgressIndicator</a>
+		<a onclick="change(this.id)" id="63">19 - JavaFX Bidirectional Binding and using Slider</a>
+		<a onclick="change(this.id)" id="64">21 - JavaFx CheckBox</a>
+		
+
+				
+</div>		
+</nav>
+</div>
+<div class="col-sm-10  video-container"  >
+
+
+<iframe  src="//www.youtube.com/embed/r59xYe3Vyks"
+frameborder="0" allowfullscreen="" class="video"></iframe>
+
+</div>
+
+</div>
+</div>
+
+
+<script type="text/javascript">
+
+
+  console.log(document.getElementsByTagName("iframe")[0].src);
+    list = ["https://www.youtube.com/embed/r59xYe3Vyks","https://www.youtube.com/embed/gzlhm0jco0g","https://www.youtube.com/embed/U8wrZRYAnmI","https://youtube.com/embed/4ekASokneGU","https://www.youtube.com/embed/qgMH6jOOFOE","https://www.youtube.com/embed/ss7BtLrbxp4","https://www.youtube.com/embed/f5YdkIzNmfM","https://www.youtube.com/embed/WZXq5_9_JDs","https://www.youtube.com/embed/HBnB69yFf_4",
+			"https://www.youtube.com/embed/L5_7XQR0r0w","https://www.youtube.com/embed/apW3UWr_dhA","https://www.youtube.com/embed/xwvdENKCkLg","https://www.youtube.com/embed/_NfwcH5zKpA","https://www.youtube.com/embed/z-QgsXkYqjc","https://www.youtube.com/embed/sliTbMkQBZ4","https://www.youtube.com/embed/o5dcpcuyuIA","https://www.youtube.com/embed/c7iU8ZFA9gQ",
+			"https://www.youtube.com/embed/ZHLdVRXIuC8","https://www.youtube.com/embed/0Jc_rT7t1W8","https://www.youtube.com/embed/pBe4hLdrMHA","https://www.youtube.com/embed/n4axao9LWWE","https://www.youtube.com/embed/G9octOBgSf4","https://www.youtube.com/embed/0JBqL99wjSE","https://www.youtube.com/embed/aN8znC-ME-w","https://www.youtube.com/embed/lz1Cx6GzOuc",
+			"https://www.youtube.com/embed/GnLtvmeGAWA","https://www.youtube.com/embed/rVSlCg2ttZ0","https://www.youtube.com/embed/vcN_mXHPXVA","https://www.youtube.com/embed/HxmP7ZVUeGU","https://www.youtube.com/embed/1kUbxn9aba4","https://www.youtube.com/embed/VE0HeWFaAIQ","https://www.youtube.com/embed/EWr6rFqJUTU","https://www.youtube.com/embed/6zskWpj5unE",
+			"https://www.youtube.com/embed/i4poeR9Vucs","https://www.youtube.com/embed/R7JFhZ-WwYw","https://www.youtube.com/embed/YCalEDpu2oA","https://www.youtube.com/embed/nuYdT5q3Gxc","https://www.youtube.com/embed/fgjIk7qQong","https://www.youtube.com/embed/7ICZGNFD28g","https://www.youtube.com/embed/JtAplwiTOXc","https://www.youtube.com/embed/tkzJsP7NP54",
+			"https://www.youtube.com/embed/b5sj13Z7aho","https://www.youtube.com/embed/0ySznjdXMEA","https://www.youtube.com/embed/UXW5a-iHjso","https://www.youtube.com/embed/8bSlaGsG4dk","https://www.youtube.com/embed/9YrmON6nlEw","https://www.youtube.com/embed/ejx3VxuIc8w","https://www.youtube.com/embed/5KyYAsYvLjs","https://www.youtube.com/embed/57zkzBE0g48",
+			"https://www.youtube.com/embed/2j-e1CHsqsE","https://www.youtube.com/embed/cgv63JD7pfc","https://www.youtube.com/embed/lL1HHWTBZm4","https://www.youtube.com/embed/Q_1cZYoGoYM","https://www.youtube.com/embed/T41RvRwdqKo","https://www.youtube.com/embed/mokD1I7hl-o","https://www.youtube.com/embed/DxRLKnw_DKI","https://www.youtube.com/embed/YO9PQfTdbFI",
+			"https://www.youtube.com/embed/YvAac9FciWk","https://www.youtube.com/embed/RY_Rb2UVQKQ","https://www.youtube.com/embed/m0qm_bcV_jE","https://www.youtube.com/embed/hNz8Xf4tMI4","https://www.youtube.com/embed/VNKOljKzIG4","https://www.youtube.com/embed/jm9aET4qyKQ","https://www.youtube.com/embed/x3jhTJTDIwQ","https://www.youtube.com/embed/dSwsiolZqQo",
+
+
+
+			];
+    function change(id_of_the_tag){
+      console.log(document.getElementsByTagName("iframe")[0].src);
+      document.getElementsByTagName("iframe")[0].src = list[id_of_the_tag];
+    };
+
+    alert("If you are open the tutorial on mobile phone then please rotate the phone for better experience :)");
+</script>
+
+
+
+
+{%endblock%}
